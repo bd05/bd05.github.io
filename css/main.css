@@ -12,7 +12,6 @@ p a {
 }
 h1{
   color: #333;
-/*  font-family: 'Indie Flower', cursive;*/
   font-family: 'Sigmar One', cursive;
   text-align: center;
 }
@@ -319,7 +318,7 @@ body {
 }
 
 #hi-there{
-    font-family: 'Indie Flower', cursive;
+  font-family: 'Abel', sans-serif;
 }
 /*banner*/
 .intro-header{
@@ -371,7 +370,7 @@ input, textarea{
 }
 
 footer p{
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Abel', sans-serif;
 }
 
 /*blog post directory*/
