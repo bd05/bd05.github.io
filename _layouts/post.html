@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<!--   <link rel="stylesheet" href="../../../css/clean-blog.css">
+  <link rel="stylesheet" href="../../../img/blue_squares.jpg"> -->
+
+
+
+  <h2 class="spacing">{{ page.title }}</h2>
+
+  <div class="blog-post spacing">
+    <p class="summary">{{ page.category }}<span class="date">{{ page.date | date: '%B %d, %Y' }}</span></p>
+    {{ content }}
+  </div>
+

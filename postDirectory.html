@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+
+ <!-- Blog Post previews row 1 -->
+ <div class="row text-center">
+{% for post in site.posts limit:3 %}
+        <div class="col-md-4 col-sm-6 hero-feature">
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                <div class="thumbnail">
+                    <!--featured image must be 800x500 pixels-->
+                    <img src="{{ site.baseurl }}/featured_img/{{ post.image }}" alt="">
+                    <div class="preview-caption">
+                        <h3>
+                            {{ post.title }}
+                        </h3>
+                        <p>{{post.excerpt}}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+{% endfor %}
+
+ </div>
+<!-- Blog Post previews row 2 -->
+<div class="row text-center">
+{% for post in site.posts limit:3 offset:3 %}
+    <div class="col-md-4 col-sm-6 hero-feature">
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+            <div class="thumbnail">
+                <!--featured image must be 800x500-->
+                <img src="{{ site.baseurl }}/featured_img/{{ post.image }}" alt="">
+                <div class="preview-caption">
+                    <h3>
+                     {{ post.title }}
+                    </h3>
+                    <p>{{post.excerpt}}</p>
+                </div>
+            </div>
+        </a>
+    </div>
+{% endfor %}
+</div>
+
