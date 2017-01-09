@@ -374,8 +374,18 @@ ul,li{
   font-style: italic;
 }
 
-
+/*attempts to get navbar in mobile mode transparent*/
 .navbar-default{
   background-color: rgba(0,0,0,0) !important;
-  border-color: transparent; !important;
+  border-color: transparent !important;
+}
+
+.navbar-default .navbar-toggle {
+  background-color: rgba(0,0,0,0) !important;
+  border-color: transparent !important;
+}
+
+#mobile-nav{
+    background-color: rgba(0,0,0,0) !important;
+  border-color: transparent !important;
 }
