@@ -372,3 +372,10 @@ ul,li{
 .post-meta{
   font-style: italic;
 }
+
+/*center images in markdown posts*/
+.center-image
+{
+    margin: 0 auto;
+    display: block;
+}
