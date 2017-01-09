@@ -52,7 +52,6 @@ hr.small {
   left: 0;
   width: 100%;
   z-index: 3;
-/*  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
 }
 .navbar-custom .navbar-brand {
   font-weight: 800;
@@ -372,20 +371,4 @@ ul,li{
 
 .post-meta{
   font-style: italic;
-}
-
-/*attempts to get navbar in mobile mode transparent*/
-.navbar-default{
-  background-color: rgba(0,0,0,0) !important;
-  border-color: transparent !important;
-}
-
-.navbar-default .navbar-toggle {
-  background-color: rgba(0,0,0,0) !important;
-  border-color: transparent !important;
-}
-
-#mobile-nav{
-    background-color: rgba(0,0,0,0) !important;
-  border-color: transparent !important;
 }

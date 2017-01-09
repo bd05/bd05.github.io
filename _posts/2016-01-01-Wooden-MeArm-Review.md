@@ -6,11 +6,11 @@ image: mearm.jpg
 date:   2015-12-01
 ---
 
-I ordered a wooden Mearm a long time ago off of Ebay for fun. Mearm is a low cost DIY robot arm for hobbyists, created by Hackaday, I think. I forget which shop exactly I ordered it from on Ebay, but I after shipping and handling I think it came to about $50 CAD. <!--more--> The parts were laser cut wood, but unfortunately didn't come with any motors! remember it being advertised as a "kit" so I wish they had mentioned that motors were not included...Oh well. I ordered 9g micro servos motors off of Ebay separately. 
+I ordered a wooden Mearm a long time ago off of Ebay for fun. [Mearm][mearm-hackaday] is a low cost DIY robot arm for hobbyists, created by Hackaday, I think. I forget which shop exactly I ordered it from on Ebay, but I after shipping and handling I think it came to about $50 CAD. <!--more--> The parts were laser cut wood, but unfortunately didn't come with any motors! remember it being advertised as a "kit" so I wish they had mentioned that motors were not included...Oh well. I ordered 9g micro servos motors off of Ebay separately. 
 
 After the motors arrived I assembled the robot parts right away, which was a pretty straightforward process. A CD with pdf instructions came with it, though you could always just Google Mearm instructions. 
 
-![My helpful screenshot]({{ site.url }}/img/post-sample-image.jpg)
+![mearm]({{ site.url }}/img/mearm.jpg)
 
 Adafruit has a nice servos motor library for Arduino. I tested a single micro servos with it first to get the hang of it, then modified the code to fit in four servoses, made sure they could be controlled with potentiometers, then hooked up ther servoses in the robot arm. 
 
@@ -21,4 +21,4 @@ The servos motors were pretty weak for the weight of the robot arm. It would mov
 Whether it be my cheap micro servos motors or the weight of the wood, I'd probably recommend either buying the acrylic Mearm parts from Hackaday, or 3D printing your own parts and setting the infill setting as low as possible. These parts don't need THAT much precision, so long as they can still fit together. (And if you're off they're a good size for simply sanding down anything too big.) 
 
 
-[Mearm]:      https://hackaday.io/pdroject/181-mearm-your-robot
+[mearm-hackaday]:      https://hackaday.io/pdroject/181-mearm-your-robot
