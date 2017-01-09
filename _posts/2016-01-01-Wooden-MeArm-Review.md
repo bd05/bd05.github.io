@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Review: Wooden MeArm
+title: Review - Wooden MeArm
 excerpt_separator: <!--more-->
 image: mearm.jpg 
 date:   2015-12-01
 ---
 
-I ordered a wooden Mearm a long time ago off of Ebay for fun. Mearm is a low cost DIY robot arm for hobbyists, created by Hackaday, I think. I forget which shop exactly I ordered it from on Ebay, but I after shipping and handling I think it came to about $50 CAD. The parts were laser cut wood, but unfortunately didn't come with any motors! remember it being advertised as a "kit" so I wish they had mentioned that motors were not included...Oh well. I ordered 9g micro servos motors off of Ebay separately. <!--more--> 
+I ordered a wooden Mearm a long time ago off of Ebay for fun. Mearm is a low cost DIY robot arm for hobbyists, created by Hackaday, I think. I forget which shop exactly I ordered it from on Ebay, but I after shipping and handling I think it came to about $50 CAD. <!--more--> The parts were laser cut wood, but unfortunately didn't come with any motors! remember it being advertised as a "kit" so I wish they had mentioned that motors were not included...Oh well. I ordered 9g micro servos motors off of Ebay separately. 
 
 After the motors arrived I assembled the robot parts right away, which was a pretty straightforward process. A CD with pdf instructions came with it, though you could always just Google Mearm instructions. 
 
