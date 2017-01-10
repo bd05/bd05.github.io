@@ -63,7 +63,7 @@ Basically Jekyll runs into problems finding these resources when you go one leve
 
 {% highlight ruby %}
 <head>
-  <link href="{{ "/css/main.css" | prepend: site.url }}" rel="stylesheet">
+  < link href="{{ "/css/main.css" | prepend: site.url }}" rel="stylesheet">
  </head> 
  {% endhighlight %}
 
