@@ -2,7 +2,8 @@
 layout: post
 title:  "Trying out the 3D printer"
 date:   2016-02-06 
-image: sample-image2.jpg 
+image: 3d_printed.jpg 
+excerpt: After finishing the calibration cube, for the first time ever I had access to a 3D printer. All I had ever seen prior was the glamorous, perfectly calibrated and gorgeous models the online 3D printing hype tries to advertise, so printing failures this time 'round taught me a few things.
 ---
 
 Making the printer was pretty fun, but after printing a few calibration cubes to reassure myself, it sort of sat around for a bit. I printed a couple of guitar picks for friends, but those are flat, easy prints.

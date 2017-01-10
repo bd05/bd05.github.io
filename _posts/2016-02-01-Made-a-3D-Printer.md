@@ -4,7 +4,7 @@ title:  "Made a 3D Printer"
 date:   2016-02-01 
 excerpt: The parts came in a plain brown box with writing in Chinese on the sides and was taped shut with duct tape.  It also didn't come with the right size of screws for the metal heatbed. Apparently it was bought for about $400 or $450 in cash from someone running a shop in a storage unit. 
 
-image: sample-image2.jpg 
+image: 3d_printed_part.jpg 
 ---
 
 An acquaintance of mine bought 3D printer parts to make a DIY 3D printer. He quickly grew tired of it, however, and after finishing the initial assembly didn't really feel like working on it anymore. Finding 3D printing fairly fascinating, I took upon the task of carrying on from that point.

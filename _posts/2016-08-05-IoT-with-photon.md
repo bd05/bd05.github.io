@@ -2,7 +2,7 @@
 layout: post
 title:  "IoT with the Spark Photon"
 date:   2016-08-05
-image: sample-image2.jpg 
+image: 290_Spark.jpg 
 ---
 
 I got a Spark Photon for Christmas. I had thought IoT sounded pretty cool ever since I saw a presentation at work about it, so I was pretty happy with this gift. Photon promises an Arduino-like experience, and I guess it is pretty good at this. Spark Photon was an option at a Hackathon I later on went to, which I'll talk some more about in this post.
@@ -33,7 +33,7 @@ Here's a schematic of the hardware we used:
 
 ![pill dispenser schematic]({{ site.url }}/img/pill_dispenser_schematic.png){: .center-image }
 
-What we messed up on is we didn't think of how the motor would effectively turn the crank (missing from the photo) effectively. We didn't have any proper mechanism designed for this, so once we had done everything else we realized we didn't actually have anything to create systematic movement. This, and there was no precise mechanism to ensure that only one pill was dispensed at a time - skittles sometimes came out in in triplets and would clog the runway. Oh well, that's what hackathons are for - learning from design you made way too fast. We also didn't really have time to customize a design to 3D model right there and then. This was our first hackathon ever, so we didn't really beat ourselves up over it. 
+What we messed up on is we didn't have a good mechanism for the motor to smoothly turn the crank(missing from the photo) effectively. Also the crank didn't ensure that only one pill was dispensed at a time - skittles sometimes came out in in triplets and would clog the runway. Oh well, that's what hackathons are for - learning from design you made way too fast. We didn't really have time to customize a design to 3D model right there and then once we realized this. This was our first hackathon ever, so we didn't really beat ourselves up over it. 
 
 More interesting might be the IoT experience with the Photon, so let's focus on that for the rest of the post. 
 
@@ -43,12 +43,57 @@ Photon has a web IDE which is pretty handy. It has a very intuitive and easy to 
 
 ![photon web client]({{ site.url }}/img/photon_web_client.png){: .center-image }
 
-I think the only gotcha was trying to use Angular JS with the photon on the client side. This tripped me up a bit, as I couldn't find many people who had done this online. I will fish out the snippet of code where I make a call to the Spark API in Angular sometime and make a simple example of it. I've been meaning to do this for some time... Now that Angular 2.0 is out, I wonder if this Angular 1.5 example will be obsolete by the time I get around to it, sigh. I'm not so proud of the client side code for this project, so I'd rather I clean it up first though. You can also just do a call to the Spark API through Jquery, if you're not using Angular for the rest of your client.
+I think the only gotcha was trying to use Angular JS with the photon on the client side. This tripped me up a bit, as I couldn't find many people who had done this online. There was only one part that needed to integrate any code for the Spark photon in anyways, though. This was the one input field for the number of pills to dispense, and the button to tell the photon to dispense pills. You can see the GET and POST request for it here:
 
-Actually wait, one more gotcha. Spark photon, the last time I tried, does not work on WPA2 enterprise wifi. 
+{% highlight ruby %}
+
+//GET 
+$scope.getSparkValue = function(){
+        $http({
+            method: 'GET',
+            url: "https://api.spark.io/v1/devices/" + deviceID + "/" + getFunc + "/?access_token=" + accessToken,
+        })
+        .success(function(data) {   
+                document.getElementById("gotPos").innerHTML = data;
+                console.log("get success! data retrieved: " + data);         
+        })
+        .error(function(data, status, headers, config) {
+            console.log("get didn't work");         
+        });
+}
+
+
+$scope.setValue = function () {
+
+    console.log("got to setValue");
+    var newValue = document.getElementById('refillNum').value;
+    console.log("newValue as of setValue: " + newValue);
+
+        $http({
+            method: 'POST',
+            url: "https://api.spark.io/v1/devices/" + deviceID + "/" + setFunc + "/?access_token=" + accessToken,
+            data: $.param({args: newValue}),
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+        .success(function(data, status, headers, config) {    
+            //document.getElementById("gotPos").innerHTML = data;
+            console.log("json sent! data sent was: " + data);
+        })
+        .error(function(data, status, headers, config) {
+            console.log("set didn't work");
+        });
+}
+
+});
+
+{% endhighlight %}
+
+
+You can also just do a call to the Spark API through Jquery, if you're not using Angular for the rest of your client.
+
+Actually wait, one more gotcha. Spark photon, the last time I tried, does not work on WPA2 enterprise wifi. But other than that I thought it was fairly good.
 
 
 
 [candy-dispenser]:      http://www.thingiverse.com/thing:1011711
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-help]: https://github.com/jekyll/jekyll-help
+
