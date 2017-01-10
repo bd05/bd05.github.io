@@ -61,11 +61,13 @@ This was working all fine and dandy for me when converting my site to Jekyll, un
 
 Basically Jekyll runs into problems finding these resources when you go one level deeper - that is, whenever you are within a post. You must therefore dynamically prepend the first part of a path, since the directories change. Something like this is what I do:
 
+{% highlight html%}
 {% raw %}
 <head>
   <link href="{{ "/css/main.css" | prepend: site.url }}" rel="stylesheet">
  </head> 
 {% endraw %}
+{% endhighlight %}
 
 **3. Make sure you don't date your posts in the future**
 
