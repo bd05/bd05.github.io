@@ -13,10 +13,15 @@ I made this blog with Jekyll, and have been pretty content with the Jekyll exper
 As mentioned, Jekyll doesn't officially support Windows. You can get it to work on Windows with a few tweaks anyways though. The official Jekyll documentation does a good job of explaining what you need to do, but ere's a quick Cole's Notes style set of instructions for what I did to get it working on my Windows 10 PC:
 
 1) Install [Chocolatey][chocolatey-link].
+
 2) Install Ruby v2.2.4 by running the command `choco install ruby -version 2.2.4`. If you have a later version of Ruby installed, you MUST uninstall it before you do this. Simply setting the flat to `--allow downgrade` is not enough.
+
 3) Install the corresponding Ruby development kit with the `choco install ruby2.devkit` command.
+
 4) Navigate to `C:\tools\DevKit2` in the command prompt.
+
 5) Run `ruby dk.rb init`.
+
 6) This will have created a `config.yml` file in the `DevKit2` folder. Open this file and edit it to include `- C:/tools/ruby22`. For example, this is what my `config.yml` file looks like:
 
 {% highlight ruby %}
