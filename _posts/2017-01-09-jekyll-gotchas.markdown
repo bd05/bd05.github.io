@@ -10,7 +10,7 @@ I made this blog with Jekyll, and have been pretty content with the Jekyll exper
 
 **1. Setting up Jekyll on Windows**
 
-As mentioned, Jekyll doesn't officially support Windows. You can get it to work on Windows with a few tweaks anyways though. The official Jekyll documentation does a good job of explaining what you need to do, but ere's a quick Cole's Notes style set of instructions for what I did to get it working on my Windows 10 PC:
+As mentioned, Jekyll doesn't officially support Windows. You can get it to work on Windows with a few tweaks anyways though. The official Jekyll documentation does a good job of explaining what you need to do, but I remember installation being a bit fussy for me. Here's a quick Cole's Notes style set of instructions for what I did to get it working on my Windows 10 PC eventually:
 
 1) Install [Chocolatey][chocolatey-link].
 
@@ -61,12 +61,11 @@ This was working all fine and dandy for me when converting my site to Jekyll, un
 
 Basically Jekyll runs into problems finding these resources when you go one level deeper - that is, whenever you are within a post. You must therefore dynamically prepend the first part of a path, since the directories change. Something like this is what I do:
 
-{% highlight ruby %}
+{% raw %}
 <head>
-  < link href="{{ "/css/main.css" | prepend: site.url }}" rel="stylesheet">
+  <link href="{{ "/css/main.css" | prepend: site.url }}" rel="stylesheet">
  </head> 
- {% endhighlight %}
-
+{% endraw %}
 
 **3. Make sure you don't date your posts in the future**
 
@@ -89,7 +88,9 @@ Anyhow I don't mean to hate on Jekyll at all. It is bundled as a Ruby gem, and e
 
 ![harvest moon mining]({{ site.url }}/img/harvest_moon_mining.jpg){: .center-image }
 
-Anyhow, I'll update this post the more I use Jekyll. These are just some things that gave me some head scratchin' at first.
+I remember reading somewhere in the Jekyll documentation a snippet wherein the writer seemed to really grieve the use of Liquid templating in Jekyll. They called it something like Jekyll's biggest drawback, and lamented that Jekyll must use it for security reasons. I quite like Liquid templating so far, on the contrary. I think it makes code look nice n' sleek, and didn't have too much trouble picking it up. Maybe I just haven't tried to do too many things with it yet though, haha.
+
+Anyways, I'll update this post the more I use Jekyll. These are just some things that gave me some head scratchin' at first.
 
 
 [chocolatey-link]: https://chocolatey.org/install
