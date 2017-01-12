@@ -10,7 +10,7 @@ I ordered a wooden Mearm a long time ago off of Ebay for fun. I forget which sho
 
 After the motors arrived I assembled the robot parts right away, which was a pretty straightforward process. A CD with pdf instructions came with it, though you could always just Google Mearm instructions. 
 
-![mearm]({{ site.url }}/img/mearm.jpg)
+![mearm]({{ site.url }}/img/mearm.jpg){: .center-image }
 
 Adafruit has a nice servos motor library for Arduino. I tested a single micro servos with it first to get the hang of it, then modified the code to fit in four servoses, made sure they could be controlled with potentiometers, then hooked up ther servoses in the robot arm. 
 

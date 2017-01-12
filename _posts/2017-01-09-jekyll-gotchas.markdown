@@ -14,7 +14,7 @@ As mentioned, Jekyll doesn't officially support Windows. You can get it to work 
 
 1) Install [Chocolatey][chocolatey-link].
 
-2) Install Ruby v2.2.4 by running the command `choco install ruby -version 2.2.4`. If you have a later version of Ruby installed, you MUST uninstall it before you do this. Simply setting the flat to `--allow downgrade` is not enough.
+2) Install Ruby v2.2.4 by running the command `choco install ruby -version 2.2.4`. If you have a later version of Ruby installed, you MUST uninstall it before you do this. Simply setting the flag to `--allow downgrade` is not enough.
 
 3) Install the corresponding Ruby development kit with the `choco install ruby2.devkit` command.
 
@@ -43,6 +43,7 @@ As mentioned, Jekyll doesn't officially support Windows. You can get it to work 
 {% endhighlight %}
 
 7) Run `ruby dk.rb install` in command prompt.
+
 8) Install Jekyll with `gem install jekyll`.
 
 This should be enough to run Jekyll to preview your sites on your local machine.
