@@ -365,7 +365,7 @@ a:hover{
 }
 
 /*posts on index page*/
-ul,li{ 
+ul.post-list{ 
   list-style:none; 
 }
 

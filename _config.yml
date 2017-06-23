@@ -1,2 +1,4 @@
 name: Bernie's Blog
 markdown: kramdown
+kramdown:
+input: GFM
